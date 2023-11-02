@@ -10,9 +10,10 @@
     }
   ],
   "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "index.js"
-    }
-  ]
+        { "source": "/", "destination": "https://api.openai.com" },
+        {
+            "source": "/:match*",
+            "destination": "https://api.openai.com/:match*"
+        }
+    ],
 }
